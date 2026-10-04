@@ -19,6 +19,6 @@ def get_grade(s1, s2, s3):
     # scores 
     s = [s1, s2, s3]
     average = sum(s) / len(s)
-    return ['F', 'D', 'C', 'B', 'A'][( average > 90) + (average > 80) + (average > 70) + (average > 60)]
+    return ['F', 'D', 'C', 'B', 'A'][( average >= 90) + (average >= 80) + (average >= 70) + (average >= 60)]
 
 print(get_grade(80, 99, 73))
