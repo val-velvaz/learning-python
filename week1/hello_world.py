@@ -9,8 +9,8 @@ clever can you be to create the most creative
 world" solution you would want to show your friends?
 """
 
-def hello_world():
+def greet():
     s = b"\x48\x45\x4C\x4C\x4F\x20\x57\x4F\x52\x4C\x44\x21"
     return s.decode('ascii').lower()
 
-hello_world()
+greet()
