@@ -22,3 +22,13 @@ def get_grade(s1, s2, s3):
     return ['F', 'D', 'C', 'B', 'A'][( average >= 90) + (average >= 80) + (average >= 70) + (average >= 60)]
 
 print(get_grade(80, 99, 73))
+
+# another solution ive found interesting
+def get_grade(*s):
+    match sum(s) // 30:
+        case 10 | 9: return 'A'
+        case 8: return 'B'
+        case 7: return 'C'
+        case 6: return 'D'
+    return 'F'
+    
