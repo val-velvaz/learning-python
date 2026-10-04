@@ -18,3 +18,23 @@ Examples
 def string_to_number(s):
     return int(s)
 
+# another clever solution
+def string_to_number(s):
+    # Checking if it's float type
+    if "." in s:
+        s = float(s)
+        return s
+    
+    # Checking if it's complex type
+    elif "j" in s:
+        s = complex(s)
+        return s
+    
+    # In python we have 3 number data types, so if the last 2 cheking is false
+    # the number must be int data type
+    else:
+        s = int(s)
+        return s
+
+    # Not necessary
+    return 0
