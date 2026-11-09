@@ -1,18 +1,17 @@
-# storing an empty list
+# what is the output of the following code
+def update_order(new_item, current_order=[]): # definimos una funcion que acepta un nuevo item y guarda la orden actual
+    current_order.append(new_item) # en la lista "current_order" se le añade el nuevo item
+    return current_order # regresa la lista con el nuevo item
 
-def createStudent(name, age, grades=[]):
-    return {
-        'name': name, 
-        'age': age,
-        'grades': grades
-    }
+# First order, burger
+order1 = update_order({'item': 'burger', 'cost': '3.50'})
+# output: burger, 3.50
 
-chrisley = createStudent('Chrisley', 15)
-dallas = createStudent('Dallas', 16)
+print(order1)
 
-def addGrade(student, grade):
-    student['grades'].append(grade)
-    print(student['grades'])
+# Second order, just a soda
+order2 = update_order({'item': 'soda', 'cost': '1.50'})
+# output: burger, 3.50, soda, 1.50
 
-addGrade(chrisley, 90)
-addGrade(dallas, 100)
+# What's in that second order again?
+print(order2)
